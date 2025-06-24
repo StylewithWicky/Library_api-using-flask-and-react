@@ -1,10 +1,7 @@
 from flask import Flask
-from flask_migrate import Migrate
-from flask_sqlalchemy import Sqlalchemy
+from .extensions import db,migrate,dwt
 from config import Config
 
-db=Sqlalchemy()
-migrate=Migrate()
 
 def create_app():
     app=Flask(__name__)
